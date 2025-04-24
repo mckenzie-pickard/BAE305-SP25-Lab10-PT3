@@ -134,9 +134,9 @@ def app():
         max_value = df['ResultMeasureValue'].max()
         value_range = st.slider("Select Value Range", float(min_value), float(max_value), (float(min_value), float(max_value)))
 
-        min_date = df['ActivityStartDate'].min()
-        max_date = df['ActivityStartDate'].max()
-        date_range = st.slider("Select Date Range", min_date, max_date, (min_date, max_date))
+        min_date = pd.to_datetime(df['ActivityStartDate'].min()).to_pydatetime()
+        max_date = pd.to_datetime(df['ActivityStartDate'].max()).to_pydatetime()
+        date_range = st.slider("Select Date Range", min_value=min_date, max_value=max_date, value=(min_date, max_date))
 
         filtered_df = filter_data(df, contaminant, value_range, date_range)
 
