@@ -1,7 +1,5 @@
-pip install streamlit
-pip install folium
-pip install streamlit-folium
-pip install matplotlib
-pip install pandas
-
-pip install streamlit pandas folium matplotlib streamlit-folium
+streamlit
+folium
+streamlit-folium
+matplotlib
+pandas
