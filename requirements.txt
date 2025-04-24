@@ -1,4 +1,4 @@
-
+pip install streamlit
 pip install folium
 pip install streamlit-folium
 pip install matplotlib
